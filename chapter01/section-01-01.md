@@ -129,7 +129,29 @@ todo...
 </html>
 ```
 
+## 增加 CSS
+同样我们要增加一些 CSS 样式，否者我们的应用将完全没有样式。让我们将两个样式表引入：
 
+```
+<!doctype html>
+<html>
+	<head>
+		<title>Angular 2 - Simple Reddit</title>
+		<script src="node_modules/es6-shim/es6-shim.js"></script>
+		<script src="node_modules/zone.js/dist/zone.js"></script>
+		<script src="node_modules/reflect-metadata/Reflect.js"></script>
+		<script src="node_modules/systemjs/dist/system.src.js"></script>
+		
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="styles.css"> 
+	</head>
+	<body>
+	</body>
+</html>
+```
+
+*这个项目将采用 (Semantic-UI)[http://semantic-ui.com/] 来帮助我们编写样式。Semantic-UI 是一个类似于 Foundation 或者 Twitter Bootstrap 的 CSS 框架。我们已经将它放在下载的示例代码中，你只需要增加 link 标签引入就行了*
 
 
 
