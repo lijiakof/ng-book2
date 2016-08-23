@@ -10,7 +10,7 @@
 * [初识 TypeScript](chapter01/section-01-03.md)
 	* 创建一个 Component
 	* 增加模版
-	* 启动程序
+	* 引导程序
 	* 加载程序
 * 运行 APP
 	* 将 TypeScript 编译成 .js

@@ -100,9 +100,64 @@ Angular 2 的最大的一个功能就是模块（component）。
 
 注意我们将模版定义在两个引号之间（``` `...` ```）。这是 ES6 中的一个新功能，允许我们使用多行的字符串。采用双引号来让我们更佳容易的将多行字符串模版编写到代码中去。
 
-*我们真的需要将模版放入到代码中去吗？答案是肯定的。*
+*我们真的需要将模版放入到代码中去吗？答案是肯定的。长久以来我们都一直认为应该让代码和模版解耦。但是这对于某些团队或者项目更佳容易增加管理成本，因为你会在更多的文件从切换。*
 
-### 启动程序
+*就个人而言，如果我的模版要比一个页面的内容更加少，我更宁愿让模版和代码放在一起。当我能够同时看到业务逻辑和视图时会让人更加容易理解它们之间的交互*
+
+*将视图放到代码中的最大的缺点在于，现在很多编辑器还不支持这种语法高亮。我们希望将有更多的编辑器支持模版中的 HTML 语法高亮*
+
+### 引导程序
+代码的最后一行`bootstrap(HelloWorld);`会运行程序。第一个参数表示程序的主模块就是我们的 HelloWorld 模块。
+
+一旦程序被启动，HelloWOrld 模块将被渲染在 index.html 的`<hello-world></hello-world>`部分。让我们试一下！
+
 ### 加载程序
+运行我们的应用程序，我们需要做两件事情：
+
+* 告诉 HTML 文档导入我们的 app 文件
+* 我们需要使用`<hello-world>`模块
+
+添加以下代码到 body 的部分：
+
+```
+<!doctype html>
+<html>
+
+<head>
+    <title>Angular 2 - Hello World</title>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <script src="systemjs.config.js"></script>
+    <script>
+    	System.import('app.js').then(null, console.error.bind(console));
+    </script>
+    <hello-world></hello-world>
+</body>
+
+</html>
+```
+
+我们增加了两个 script 标签来配置我们依赖的模块，System.js：
+
+* 我们加载 systemjs.config.js 这个文件告诉 System.js 如何加载类库和文件。详细内容现在并不重要。
+* 我们导入 app.js 文件
+
+最重要的代码如下：
+
+```
+System.import('app.js')
+```
+
+它告诉 System.js 我们想加载 app.js 作为程序的入口。现在有一个问题在于：我们现在根本还没有 app.js 文件！（我们的文件是 app.ts，是一个 TypeScript 文件。）
+
+
 
 
