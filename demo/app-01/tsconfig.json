@@ -9,10 +9,8 @@
         "removeComments": false,
         "noImplicitAny": false
     },
-    "files": [
-        "app.ts"
-    ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "app.ts"
     ]
 }

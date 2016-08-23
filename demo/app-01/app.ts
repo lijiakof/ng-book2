@@ -1,5 +1,6 @@
 import { bootstrap } from "@angular/platform-browser-dynamic";
 import { Component } from "@angular/core";
+import {enableProdMode} from "@angular/core";
 
 @Component({
 	selector: 'hello-world',
@@ -13,4 +14,5 @@ class HelloWorld {
 
 }
 
+//enableProdMode();
 bootstrap(HelloWorld);
