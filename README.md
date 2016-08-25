@@ -12,7 +12,7 @@
 	* 增加模版
 	* 引导程序
 	* 加载程序
-* 运行 APP
+* [运行 APP](chapter01/section-01-04.md)
 	* 将 TypeScript 编译成 .js
 	* 使用 npm
 	* 将程序变为服务

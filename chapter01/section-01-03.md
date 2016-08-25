@@ -156,7 +156,7 @@ Angular 2 的最大的一个功能就是模块（component）。
 System.import('app.js')
 ```
 
-它告诉 System.js 我们想加载 app.js 作为程序的入口。现在有一个问题在于：我们现在根本还没有 app.js 文件！（我们的文件是 app.ts，是一个 TypeScript 文件。）
+它告诉 System.js 我们要加载 app.js 作为程序的入口。现在有一个问题在于：我们现在根本还没有 app.js 文件！（我们的文件是 app.ts，是一个 TypeScript 文件。）
 
 
 
